@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container">
+    <h2 class="text-center text-success"> WELCOME <?php echo $_SESSION['vmail']; ?> </h2>
+  </div>
+
 <div class="container" style="padding:0">
     <nav class="navbar navbar-default">
         <div class="navbar-header">
@@ -17,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" class="btn btn-primary btn-tweet">Compose</a>
+          <a class="navbar-brand" href="compose.php" class="btn btn-primary btn-tweet">Compose</a>
         </div>
 
         <div class="collapse navbar-collapse" id="demos">
@@ -41,11 +50,13 @@
 
                 <div class="media highlight">
                     <a class="media-left" href="#">
-                        <img src="avtar.jpg" alt=""  class="img-circle">
+                        <img src="image1.jpg" alt=""  class="img-circle">
                     </a>
                     <div class="media-body">
-                         <span class="mail-sender"><h5>Rahul Singh</h5></span>
-                        <h2 class="media-heading"><a href="http://hongkiat.com/blog/a">Test Mail for blind</a></h2>
+                         <span class="mail-sender"><h5>hello <?php echo  $_SESSION['vmail']; ?>
+
+                         </h5></span>
+                        <h2 class="media-heading"><a href="http://hongkiat.com/blog/a">mail from <?php echo $_SESSION['name']; ?> </a></h2>
                         <p><h4>Sample email for testing purpose and still having connection to other link.. </h4></p>
                         <div class="share">
                             <button class="btn btn-primary btn-tweet" type="button">
@@ -57,10 +68,10 @@
 
                  <div class="media">
                     <a class="media-left" href="#">
-                        <img src="avtar.jpg" alt=""  class="img-circle">
+                        <img src="image1.jpg" alt=""  class="img-circle">
                     </a>
                     <div class="media-body">
-                         <span class="mail-sender"><h5>Rahul Singh</h5></span>
+                         <span class="mail-sender"><h5>hello <?php echo $_SESSION['vmail']; ?> </h5></span>
                         <h2 class="media-heading"><a href="http://hongkiat.com/blog/a">Sample Mail Colum 2</a></h2>
                         <p><h4>Again Sample email for testing purpose and still having connection to other link.. </h4></p>
                         <div class="share">
@@ -73,7 +84,7 @@
 
                   <div class="media">
                     <a class="media-left" href="#">
-                        <img src="avtar.jpg" alt=""  class="img-circle">
+                        <img src="image1.jpg" alt=""  class="img-circle">
                     </a>
                     <div class="media-body">
                          <span class="mail-sender"><h5>Nomination</h5></span>
